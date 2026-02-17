@@ -25,6 +25,10 @@ Primary delivery targets:
 - `@effect-statsig/expo`
 - `@effect-statsig/buildtime`
 
+## Active Specifications
+
+- `effect-statsig-monorepo` - Effect-native Statsig monorepo with provider-agnostic services, runtime adapters, package docs, and runnable samples.
+
 ## Delivery Standards (Required)
 
 Every package must ship with all of the following:
@@ -87,4 +91,3 @@ Sample README minimum sections:
 3. Run commands
 4. Verification steps
 5. Common failures
-
