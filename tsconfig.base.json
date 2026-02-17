@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "types": ["node", "vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+      "@effect-statsig/core": ["packages/core/src/index.ts"],
+      "@effect-statsig/statsig": ["packages/statsig/src/index.ts"],
+      "@effect-statsig/node": ["packages/node/src/index.ts"],
+      "@effect-statsig/browser": ["packages/browser/src/index.ts"],
+      "@effect-statsig/react": ["packages/react/src/index.ts"],
+      "@effect-statsig/cloudflare": ["packages/cloudflare/src/index.ts"],
+      "@effect-statsig/expo": ["packages/expo/src/index.ts"],
+      "@effect-statsig/buildtime": ["packages/buildtime/src/index.ts"]
+    }
+  },
+  "include": ["packages/**/*.ts", "packages/**/*.tsx", "examples/**/*.ts", "examples/**/*.tsx", "scripts/**/*.mjs"]
+}

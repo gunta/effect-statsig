@@ -1,0 +1,10 @@
+{
+  "name": "@examples/buildtime-flags",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx index.ts",
+    "test": "tsx test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

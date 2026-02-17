@@ -1,0 +1,43 @@
+{
+  "name": "effect-statsig-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Effect-native Statsig monorepo",
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "vitest run --config vitest.config.ts --coverage && pnpm coverage:check",
+    "test:integration": "vitest run --config vitest.config.ts packages/*/test/*.integration.test.ts packages/*/test/*.integration.test.tsx",
+    "test:e2e": "vitest run --config vitest.e2e.config.ts",
+    "test:examples": "node scripts/run-examples.mjs",
+    "lint": "node scripts/lint.mjs",
+    "docs:check": "node scripts/check-docs.mjs",
+    "coverage:check": "node scripts/check-coverage.mjs",
+    "release:check": "node scripts/check-release-readiness.mjs",
+    "check:all": "pnpm lint && pnpm typecheck && pnpm test && pnpm test:integration && pnpm test:e2e && pnpm build && pnpm docs:check && pnpm test:examples && pnpm release:check",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
+  },
+  "dependencies": {
+    "@effect/schema": "latest",
+    "effect": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@changesets/cli": "latest",
+    "@testing-library/react": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitest/coverage-v8": "^4.0.18",
+    "jsdom": "latest",
+    "tsup": "latest",
+    "tsx": "latest",
+    "turbo": "latest",
+    "typescript": "latest",
+    "vitest": "latest"
+  }
+}
